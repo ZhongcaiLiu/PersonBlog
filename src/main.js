@@ -4,10 +4,10 @@ import router from '@/router'
 import store from '@/store'
 
 Vue.config.productionTip = false
-//自定义指令
+//自定义指令（彩虹色）
 Vue.directive('rainbow', {
   bind(el, binding, vnode) {
-    el.style.color='#'+Math.random().toString(16).slice(2,8)
+    el.style.color = '#' + Math.random().toString(16).slice(2, 8)
   }
 })
 

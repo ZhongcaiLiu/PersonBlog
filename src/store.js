@@ -16,7 +16,4 @@ export default new Vuex.Store({
             state.blogs.splice(index, 1);
         }
     },
-    actions: {
-
-    },
 })
