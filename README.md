@@ -1,10 +1,11 @@
-#Vue入门练手demo（个人博客）
+# Vue入门练手demo（个人博客）
 
-用到了 ***Vuex*** ***Vue-router*** *localStorage* *自定义指令*
+用到了 ***Vuex Vue-router*** *localStorage 自定义指令*
 
 _彩虹色_
 
-##Vue实例
+## Vue实例
+
 ```
 import Vue from 'vue'
 import App from './App.vue'
@@ -27,7 +28,8 @@ new Vue({
 }).$mount('#app')
 
 ```
-##Vuex
+## Vuex
+
 ```
 import Vue from 'vue'
 import Vuex from 'vuex'
@@ -49,7 +51,8 @@ export default new Vuex.Store({
     },
 })
 ```
-##Vue-router
+## Vue-router
+
 ```
 import Vue from 'vue'
 import Router from 'vue-router'
@@ -85,10 +88,11 @@ export default new Router({
     ]
 })
 ```
-###router-link传参
-```
+### router-link传参
+
+``
 <div class="blog" v-for="(blog, index) in Showblogs" :key="index">
       <router-link :to="'/blog/'+blog.title+'/'+blog.content+'/'+blog.author">
         <h2 v-rainbow>{{blog.title}}</h2>
       </router-link>
-```
+``
