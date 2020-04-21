@@ -1,8 +1,8 @@
 # Vue入门练手demo（个人博客）
 
-用到了 ***Vuex Vue-router*** *localStorage 自定义指令*
+## 用到了 ***Vuex Vue-router*** *localStorage 自定义指令*
 
-_彩虹色_
+### _彩虹色_
 
 ## Vue实例
 
@@ -90,9 +90,9 @@ export default new Router({
 ```
 ### router-link传参
 
-``
+```
 <div class="blog" v-for="(blog, index) in Showblogs" :key="index">
       <router-link :to="'/blog/'+blog.title+'/'+blog.content+'/'+blog.author">
         <h2 v-rainbow>{{blog.title}}</h2>
       </router-link>
-``
+```
