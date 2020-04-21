@@ -39,7 +39,6 @@
 </template>
 
 <script>
-
 import { mapState } from "vuex";
 import localStorage from "@/utils/localStorage";
 
@@ -50,13 +49,26 @@ export default {
       blog: {
         title: "",
         content: "",
-        type: [],
+        type:[],
         author: ""
       }
     };
   },
   methods: {
     addBlog() {
+      let reg = /[\w\W]+/;
+      if (!reg.test(this.blog.title) || !reg.test(this.blog.content)) {
+        alert("主题或内容不能为空！");
+        return;
+      }
+      if (!reg.test(this.blog.type)) {
+        alert("至少选择一个所属分类！");
+        return;
+      }
+      if (!reg.test(this.blog.author)) {
+        alert("请选择作者！");
+        return;
+      }
       this.key = !this.key;
       this.$store.commit("addBlogs", this.blog);
     }

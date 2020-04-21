@@ -11,6 +11,9 @@ export default new Vuex.Store({
     mutations: {
         addBlogs(state, blog) {
             state.blogs.unshift(blog)
+        },
+        delBlogs(state, index) {
+            state.blogs.splice(index, 1);
         }
     },
     actions: {
